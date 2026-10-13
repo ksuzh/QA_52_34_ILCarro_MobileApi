@@ -1,7 +1,6 @@
 package dto;
 
 import lombok.*;
-import utils.enums.Fuel;
 
 @Getter
 @Setter
@@ -9,15 +8,21 @@ import utils.enums.Fuel;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
+
 public class Car {
-    private String location;
+    private String serialNumber;
     private String manufacture;
     private String model;
     private String year;
-    private Fuel fuel;
+    private String fuel;
     private Integer seats;
     private String carClass;
-    private String serialNumber;
-    private Double price;
+    private Double pricePerDay;
     private String about;
+    private String city;
+    private Double lat;
+    private Double lng;
+    private String image;
+    private String owner;
+    BookedDto[] bookedPeriods;
 }
