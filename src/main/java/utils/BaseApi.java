@@ -7,4 +7,8 @@ public interface BaseApi {
 
     String AUTH = "Authorization";
     String ADD_CAR_URL = "/v1/cars";
+    String GET_USER_CARS_URL = "/v1/cars/my";
+    String SEARCH_CAR_URL = "/v1/cars/search";
+    String BOOK_CAR_URL = "/v1/cars/{serialNumber}/booking";
+    String DELETE_CAR_URL = "/v1/cars/{serialNumber}";
 }
