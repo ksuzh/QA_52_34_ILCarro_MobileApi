@@ -22,6 +22,7 @@ dependencies {
 
     implementation 'io.rest-assured:rest-assured:4.5.1'
     testImplementation 'com.fasterxml.jackson.core:jackson-databind:2.15.2'
+    implementation 'io.appium:java-client:9.3.0'
 
 }
 
