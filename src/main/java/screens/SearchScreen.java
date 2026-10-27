@@ -21,6 +21,15 @@ public class SearchScreen extends BaseScreen{
     @AndroidFindBy(xpath="//android.widget.TextView[@resource-id='com.telran.ilcarro:id/title' and @text='Logout']")
     WebElement btnLogout;
 
+    @AndroidFindBy(xpath = "//android.widget.Toast[@text='Registration success!']")
+    WebElement popUpRegistrationSuccess;
+
+    @AndroidFindBy(xpath = "//android.widget.Toast[@text='Login success!']")
+    WebElement popUpLoginSuccess;
+
+    @AndroidFindBy(xpath = "//android.widget.TextView[@resource-id='com.telran.ilcarro:id/title' and @text='My Cars']")
+    WebElement btnMyCars;
+
     public void clickBtnDots(){
         clickWait(btnDots);
     }
@@ -35,4 +44,19 @@ public class SearchScreen extends BaseScreen{
         return btnLogout.isDisplayed();
     }
 
+    public void clickBtnLogout(){
+        clickWait(btnLogout);
+    }
+
+    public boolean validatePopUpRegistrationSuccess(String text) {
+        return isTextInElementPresent(popUpRegistrationSuccess, text);
+    }
+
+    public boolean validatePopUpLoginSuccess(String text) {
+        return isTextInElementPresent(popUpLoginSuccess, text);
+    }
+
+    public void clickBtnMyCars(){
+        clickWait(btnMyCars);
+    }
 }
